@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "discord.js": "^12.5.1"
+  },
+  "name": "filter-bot",
+  "version": "1.0.0",
+  "description": "Filter bot made by NAT2K15",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NAT2K15",
+  "license": "ISC"
+}

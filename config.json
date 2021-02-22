@@ -1,0 +1,18 @@
+{
+    "token": "",
+    "presence": "the bad words! and make sure no one sends invites",
+
+    "embed": {
+        "color": "#00000"
+    },
+
+    "word_filter": {
+        "bypass": ["role-id-here", "role-id-here"],
+        "blacklist_words": ["lol"]
+    },
+
+    "invite_filter": {
+        "bypass": ["role-id-here", "role-id-here"],
+        "blacklist_invites": ["discord.gg", ".gg/", ".gg /", ". gg /", ". gg/", "discord .gg /", "discord.gg /", "discord .gg/", "discord .gg", "discord . gg", "discord. gg", "discord gg", "discordgg", "discord gg /"]
+    }
+}

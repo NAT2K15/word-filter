@@ -15,7 +15,7 @@ client.on('message', async(message) => {
         config.word_filter.blacklist_words.forEach(async badword => {
             if (message.content.toLowerCase().search(badword.toLowerCase()) >= 0) {
                 if (!message.member.roles.cache.some(r => config.word_filter.bypass.includes(r.id))) {
-                    await message.delete()
+                    await message.delete().catch(e => {}) 
                     let e1 = new MessageEmbed()
                         .setDescription(`You cannot say || ${badword} ||  in ${message.guild.name}`)
                         .setColor(config.embed.color)
@@ -30,7 +30,7 @@ client.on('message', async(message) => {
         const bannedinvites = config.invite_filter.blacklist_invites
         if (bannedinvites.some(invite => message.content.toLowerCase().includes(invite))) {
             if (!message.member.roles.cache.some(r => config.invite_filter.bypass.includes(r.id))) {
-                await message.delete();
+                await message.delete().catch(e => {}) 
                 let nat2k15 = new MessageEmbed();
                 nat2k15.setDescription(`You cannot send discord invites in this guild`)
                 nat2k15.setColor(config.embed.color)
